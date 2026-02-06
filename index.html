@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кристина и Захар - Свадебное приглашение</title>
+    <title>Захар и Кристина - Свадебное приглашение</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -55,8 +55,7 @@
             opacity: 1;
             transform: none;
             overflow-x: hidden;
-            background: linear-gradient(135deg, rgba(212, 193, 232, 0.5) 0%, rgba(255, 223, 229, 0.6) 50%, rgba(244, 187, 196, 0.4) 100%),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="flowers" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="30" fill="none" stroke="%23F4BBC4" stroke-width="1.5" opacity="0.4"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23D4C1E8" stroke-width="1" opacity="0.35"/></pattern></defs><rect width="100%25" height="100%25" fill="url(%23flowers)"/></svg>');
+            background: linear-gradient(135deg, rgba(212, 193, 232, 0.7) 0%, rgba(255, 223, 229, 0.9) 45%, rgba(244, 187, 196, 0.8) 100%);
             background-size: cover;
             background-position: center;
             display: flex;
@@ -75,80 +74,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.25);
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.6) 0%, transparent 55%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.55) 0%, transparent 55%),
+                        rgba(255, 255, 255, 0.18);
             z-index: 0;
-        }
-
-        /* Розы на главном блоке — композиция с разными размерами, поворотами и параллаксом */
-        .hero-roses {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .hero-rose {
-            position: absolute;
-            height: auto;
-            object-fit: contain;
-            opacity: 0.82;
-            filter: drop-shadow(0 2px 10px rgba(170, 131, 182, 0.15));
-            will-change: transform;
-            transition: transform 0.2s ease-out;
-        }
-
-        /* Композиция: разные размеры (35–95px), ротации, глубины для параллакса */
-        .hero-rose-1 { top: 4%; left: 3%; width: 72px; transform: rotate(-18deg); }
-        .hero-rose-2 { top: 12%; right: 4%; width: 58px; transform: rotate(14deg); }
-        .hero-rose-3 { top: 38%; left: 0; width: 48px; transform: rotate(-8deg); }
-        .hero-rose-4 { top: 52%; right: 2%; width: 62px; transform: rotate(20deg); }
-        .hero-rose-5 { bottom: 18%; left: 6%; width: 55px; transform: rotate(5deg); }
-        .hero-rose-6 { bottom: 10%; right: 8%; width: 45px; transform: rotate(-15deg); }
-        .hero-rose-7 { top: 22%; left: 14%; width: 42px; transform: rotate(6deg); }
-        .hero-rose-8 { top: 68%; right: 14%; width: 52px; transform: rotate(-12deg); }
-        .hero-rose-9 { bottom: 38%; left: 18%; width: 38px; transform: rotate(16deg); }
-        .hero-rose-10 { top: 32%; right: 20%; width: 58px; transform: rotate(-7deg); }
-        .hero-rose-11 { top: 8%; left: 22%; width: 40px; transform: rotate(22deg); }
-        .hero-rose-12 { bottom: 28%; right: 22%; width: 50px; transform: rotate(-20deg); }
-        .hero-rose-13 { top: 58%; left: 8%; width: 44px; transform: rotate(10deg); }
-        .hero-rose-14 { top: 18%; right: 28%; width: 36px; transform: rotate(-11deg); }
-        .hero-rose-15 { bottom: 45%; left: 4%; width: 56px; transform: rotate(8deg); }
-        .hero-rose-16 { top: 75%; left: 20%; width: 42px; transform: rotate(-16deg); }
-
-        /* Мобильная композиция — розы по краям, центр свободен для текста */
-        @media (max-width: 768px) {
-            .hero-rose {
-                width: 32px !important;
-                opacity: 0.65;
-            }
-            /* Углы и края: не перекрываем заголовок, имена, дату, кнопку */
-            .hero-rose-1 { top: 2%; left: -2%; }
-            .hero-rose-2 { top: 2%; right: -2%; }
-            .hero-rose-3 { top: 28%; left: -4%; }
-            .hero-rose-4 { top: 72%; right: -3%; }
-            .hero-rose-5 { bottom: 28%; left: -3%; }
-            .hero-rose-6 { bottom: 2%; right: -2%; }
-            .hero-rose-7 { top: 8%; left: 5%; }
-            .hero-rose-8 { top: 78%; right: 6%; }
-            .hero-rose-9 { bottom: 50%; left: 2%; }
-            .hero-rose-10 { top: 82%; right: 2%; }
-            .hero-rose-11 { top: 4%; left: 12%; }
-            .hero-rose-12 { bottom: 8%; right: 12%; }
-            .hero-rose-13 { top: 62%; left: -2%; }
-            .hero-rose-14 { top: 12%; right: 14%; }
-            .hero-rose-15 { bottom: 55%; left: -1%; }
-            .hero-rose-16 { bottom: 18%; right: 4%; }
-        }
-
-        @media (max-width: 480px) {
-            .hero-rose { width: 28px !important; opacity: 0.6; }
-            .hero-rose-7 { left: 2%; }
-            .hero-rose-11 { left: 8%; }
-            .hero-rose-14 { right: 10%; }
         }
 
         .hero-content {
@@ -158,17 +87,21 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.2rem, 7vw, 3.6rem);
             color: var(--dark-gray);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             text-shadow: 0 1px 2px rgba(255, 255, 255, 1), 0 2px 8px rgba(0, 0, 0, 0.08);
+            letter-spacing: 0.03em;
         }
 
         .hero .names {
-            font-size: clamp(1.8rem, 6vw, 3rem);
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.8rem, 9vw, 4.5rem);
             color: var(--lavender);
             margin-bottom: 2rem;
-            font-weight: 600;
+            font-weight: 400;
+            letter-spacing: 0.06em;
         }
 
         .hero .date {
@@ -667,38 +600,7 @@
         .timeline-item {
             position: relative;
             margin-bottom: 2.5rem;
-            padding-left: 2rem;
-        }
-
-        .timeline-item::before {
-            content: '❤️';
-            position: absolute;
-            left: -2.5rem;
-            top: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--white);
-            border-radius: 50%;
-            box-shadow: 0 2px 8px rgba(244, 187, 196, 0.4);
-            animation: emojiFloat 2.8s ease-in-out infinite;
-        }
-
-        .timeline-item:nth-child(2)::before {
-            content: '🎂';
-            animation-delay: 0.3s;
-        }
-
-        .timeline-item:nth-child(3)::before {
-            content: '🎉';
-            animation-delay: 0.6s;
-        }
-
-        .timeline-item:nth-child(4)::before {
-            content: '✨';
-            animation-delay: 0.9s;
+            padding-left: 0;
         }
 
         .timeline-time {
@@ -935,7 +837,7 @@
         }
 
         .wishes-list li::before {
-            content: '💝';
+            content: '';
             font-size: 1.5rem;
             display: inline-block;
             animation: emojiSoftPulse 2.5s ease-in-out infinite;
@@ -1075,6 +977,18 @@
         }
 
         /* Animations */
+        @keyframes heroGradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1162,14 +1076,6 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero {
-                background: linear-gradient(160deg, rgba(212, 193, 232, 0.55) 0%, rgba(255, 223, 229, 0.7) 35%, rgba(244, 187, 196, 0.5) 70%, rgba(170, 131, 182, 0.25) 100%);
-            }
-
-            .hero::before {
-                background: rgba(255, 255, 255, 0.18);
-            }
-
             .program {
                 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 223, 229, 0.45), rgba(212, 193, 232, 0.2));
             }
@@ -1315,31 +1221,12 @@
 <body>
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-roses" id="hero-roses" aria-hidden="true">
-            <img class="hero-rose hero-rose-1" src="image/rose/1.png" alt="" data-depth="0.4" data-rotate="-18">
-            <img class="hero-rose hero-rose-2" src="image/rose/2.png" alt="" data-depth="0.6" data-rotate="14">
-            <img class="hero-rose hero-rose-3" src="image/rose/3.png" alt="" data-depth="0.25" data-rotate="-8">
-            <img class="hero-rose hero-rose-4" src="image/rose/4.png" alt="" data-depth="0.55" data-rotate="20">
-            <img class="hero-rose hero-rose-5" src="image/rose/5.png" alt="" data-depth="0.35" data-rotate="5">
-            <img class="hero-rose hero-rose-6" src="image/rose/6.png" alt="" data-depth="0.5" data-rotate="-15">
-            <img class="hero-rose hero-rose-7" src="image/rose/7.png" alt="" data-depth="0.3" data-rotate="6">
-            <img class="hero-rose hero-rose-8" src="image/rose/8.png" alt="" data-depth="0.45" data-rotate="-12">
-            <img class="hero-rose hero-rose-9" src="image/rose/9.png" alt="" data-depth="0.2" data-rotate="16">
-            <img class="hero-rose hero-rose-10" src="image/rose/10.png" alt="" data-depth="0.5" data-rotate="-7">
-            <img class="hero-rose hero-rose-11" src="image/rose/1.png" alt="" data-depth="0.38" data-rotate="22">
-            <img class="hero-rose hero-rose-12" src="image/rose/3.png" alt="" data-depth="0.42" data-rotate="-20">
-            <img class="hero-rose hero-rose-13" src="image/rose/5.png" alt="" data-depth="0.28" data-rotate="10">
-            <img class="hero-rose hero-rose-14" src="image/rose/7.png" alt="" data-depth="0.32" data-rotate="-11">
-            <img class="hero-rose hero-rose-15" src="image/rose/2.png" alt="" data-depth="0.48" data-rotate="8">
-            <img class="hero-rose hero-rose-16" src="image/rose/6.png" alt="" data-depth="0.35" data-rotate="-16">
-        </div>
         <div class="hero-content">
-            <h1>Этот день настал!</h1>
-            <div class="names">Кристина и Захар</div>
+            <h1>Save the date</h1>
+            <div class="names">Захар и Кристина</div>
             <div class="date">
                 Воскресенье • <span class="date-number">16</span> Август 2026
             </div>
-            <a href="#program" class="btn">До скорой встречи!</a>
         </div>
     </section>
 
@@ -1348,12 +1235,14 @@
         <div class="intro-accent">
             <div class="intro-photo-wrap">
                 <!-- Подставьте свой адрес фото в src -->
-                <img src="image/11374465.png" alt="Родные и близкие" width="400" height="400">
+                <img src="image/IMG_2839_2.jpg" alt="Родные и близкие" width="400" height="400">
             </div>
         </div>
         <div class="intro-content">
-            <h2>Родные и близкие!</h2>
-            <p>Если вы сейчас читаете этот текст, значит совсем скоро вы увидите одного из нас в свадебном платье и думаем, что вы догадываетесь, кого именно…</p>
+            <h2>Дорогие Яков и Алеся</h2>
+            <p>В нашей жизни наступает самый счастливый и важный день — день, когда мы становимся семьёй. И для нас невероятно важно, чтобы в этот момент рядом были вы — наши самые родные и близкие люди.
+
+                Приглашаем вас разделить с нами радость этого события и благословить наш союз в начале семейного пути.</p>
         </div>
     </section>
 
@@ -1431,32 +1320,32 @@
     <!-- Program Section -->
     <section class="program" id="program">
         <div class="section-inner">
-        <h2>Программа Свадьбы</h2>
+        <h2>План дня</h2>
         <div class="program-layout">
             <div class="program-timeline-wrap">
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-time">12:00</div>
-                        <div class="timeline-text">Начало венчания ❤️❤️❤️</div>
+                        <div class="timeline-time">🤍 12:00</div>
+                        <div class="timeline-text">Венчание</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-time">14:30</div>
-                        <div class="timeline-text">Welcome в дубицу (♡. ♡)!</div>
+                        <div class="timeline-time">🤍 14:30</div>
+                        <div class="timeline-text">Welcome в Дубицу</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-time">16:00</div>
-                        <div class="timeline-text">Начало банкета (•o•)</div>
+                        <div class="timeline-time">🤍 16:00</div>
+                        <div class="timeline-text">Праздничный банкет</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-time">22:30</div>
-                        <div class="timeline-text">Завершение свадьбы :)</div>
+                        <div class="timeline-time">🤍 22:30</div>
+                        <div class="timeline-text">Завершение свадьбы</div>
                     </div>
                 </div>
             </div>
             <div class="program-photo-wrap">
                 <div class="program-photo-frame">
                     <!-- Подставьте свой адрес фото в src -->
-                    <img src="image/photo.webp" alt="Кристина и Захар" width="380" height="475">
+                    <img src="image/IMG_2838_2.jpg" alt="Кристина и Захар" width="380" height="475">
                 </div>
             </div>
         </div>
@@ -1466,54 +1355,31 @@
     <!-- Location Section -->
     <section class="location" id="location">
         <div class="section-inner">
-        <h2>Локация</h2>
+        <h2>Локации</h2>
         
         <div class="location-block">
             <!-- Подставьте свой адрес фото в src -->
             <div class="location-photo-wrap">
                 <img src="image/photo_2026.jpg" alt="Начало венчания" width="160" height="160">
             </div>
-            <h3>Начало венчания / 12:00</h3>
+            <h3>Венчание 12:00</h3>
             <p class="location-address">
-                Мы ждем вас на нашей свадьбе, которая начнется по адресу
-            </p>
-            <p class="location-address" style="font-weight: 600; color: var(--lavender);">
                 Мошенского, 66, г. Брест
             </p>
+           <!--   <p class="location-address" style="font-weight: 600; color: var(--lavender);">
+                Мошенского, 66, г. Брест
+            </p>-->
         </div>
 
         <div class="location-block">
-            <div class="location-icon">🎂</div>
-            <h3>Банкет</h3>
+            <div class="location-photo-wrap">
+                <img src="image/IMG_2622_r.png" alt="Начало венчания" width="160" height="160">
+            </div>
+            <h3>Праздничный банкет</h3>
             <p class="location-address">
-                И продолжится вместе с пиром на ул. Центральная 2А, Дубица, Брестская область
+                Ул. Центральная 2а, Дубица, Брестская область
             </p>
-            <a href="https://yandex.ru/maps/?pt=23.6975,52.0856&z=15&l=map" target="_blank" class="btn" style="margin-top: 1rem;">Как добраться</a>
-        </div>
-        </div>
-    </section>
-
-    <!-- Countdown Section -->
-    <section class="countdown" id="countdown">
-        <div class="section-inner">
-        <h2>До нашей свадьбы осталось</h2>
-        <div class="countdown-container">
-            <div class="countdown-item">
-                <span class="countdown-number" id="days">0</span>
-                <span class="countdown-label">Дней</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="hours">0</span>
-                <span class="countdown-label">Часов</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="minutes">0</span>
-                <span class="countdown-label">Минут</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="seconds">0</span>
-                <span class="countdown-label">Секунд</span>
-            </div>
+            <a href="https://yandex.by/maps/-/CPESe0Nj" target="_blank" class="btn" style="margin-top: 1rem;">Как добраться</a>
         </div>
         </div>
     </section>
@@ -1543,7 +1409,7 @@
             <div class="dress-code-col">
                 <div class="dress-code-photo-wrap">
                     <!-- Подставьте адрес фото для джентльменов в src -->
-                    <img src="image/style.png" alt="Пример для джентльменов" width="280" height="373">
+                    <img src="image/IMG_2862.JPG" alt="Пример для джентльменов" width="280" height="373">
                 </div>
                 <p class="dress-code-col-caption">Пример для джентльменов</p>
             </div>
@@ -1554,26 +1420,26 @@
     <!-- Wishes Section -->
     <section class="wishes" id="wishes">
         <div class="section-inner">
-        <h2>Пожелания гостям</h2>
-        <div class="wishes-text">
+        <h2>Пожелание гостям</h2>
+        <!--<div class="wishes-text">
             Дорогие и родные! Мы знаем, что вы хотите сделать наш день особенным, и мы очень ценим вашу заботу. 
             Поэтому мы хотели бы поделиться с вами нашими пожеланиями, которые помогут сделать этот день еще более незабываемым.
 
             
 
-        </div>
+        </div>-->
         <ul class="wishes-list">
-            <li>Перед подтверждением сделайте маленький важный шаг. Заполните, пожалуйста, анкету гостя. Для некоторых из вас это будет благословением.</li>
-            <li>Подтвердите свое присутствие до 24.06.2024.</li>
+            <!-- <li>Перед подтверждением сделайте маленький важный шаг. Заполните, пожалуйста, анкету гостя. Для некоторых из вас это будет благословением.</li>
+            <li>Подтвердите свое присутствие до 24.06.2024.</li>-->
             <li>Мы знаем, что многие из вас захотят порадовать нас красивыми букетами, и мы очень ценим эту мысль!
 
                 Но мы вынуждены признаться: мы — неответственные "цветководы". Сразу после свадьбы мы сбегаем в свадебное путешествие, и нам будет очень больно смотреть, как прекрасные цветы завянут без нас в пустой квартире.
                 
                 Поэтому мы будем бесконечно благодарны, если вы направите сумму, предназначенную для цветов, в наш "фонд мечты". Так ваша забота будет для нас бесценна.</li>
-            <li>Улыбайтесь чаще)))</li>
+            <!--<li>Улыбайтесь чаще)))</li>-->
         </ul>
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="#form" class="btn">Подтвердить присутствие →</a>
+            <!--<a href="#form" class="btn">Подтвердить присутствие →</a>-->
         </div>
         </div>
     </section>
@@ -1584,7 +1450,7 @@
         <h2>Анкета гостя</h2>
         <div class="form-container">
             <p style="text-align: center; margin-bottom: 2rem; color: var(--medium-gray);">
-                Просим подтвердить точное своё присутствие на торжестве до 24.06.2024
+                Просим подтвердить свое присутствие до 16.07.2026
             </p>
             <form id="guest-form">
                 <div class="form-group required">
@@ -1603,14 +1469,14 @@
                         <option value="no">Нет, не смогу присутствовать</option>
                     </select>
                 </div>
-                <div class="form-group required">
+                <!--  <div class="form-group required">
                     <label for="persons">Количество персон</label>
                     <input type="number" id="persons" name="persons" min="1" required>
                 </div>
                 <div class="form-group">
                     <label for="guest-wishes">Пожелания/комментарии</label>
                     <textarea id="guest-wishes" name="wishes" placeholder="Ваши пожелания молодоженам..."></textarea>
-                </div>
+                </div>-->
                 <button type="submit" class="btn" style="width: 100%;">Подтвердить →</button>
             </form>
         </div>
@@ -1621,31 +1487,58 @@
     <section class="contacts" id="contacts">
         <div class="section-inner">
         <h2>Связаться с нами</h2>
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--medium-gray);">
+        <!-- <p style="text-align: center; margin-bottom: 2rem; color: var(--medium-gray);">
             По всем вопросам, связанным с мероприятием, вы можете связаться с нами:
-        </p>
+        </p>-->
         <div class="contacts-grid">
+          
+            <div class="contact-card">
+                <div class="contact-name">Захар</div>
+                <div class="contact-phone">+375 (29) 769-32-65</div>
+                <a href="tel:+375297693265" class="btn" style="font-size: 0.9rem; padding: 0.7rem 1.5rem;">Связаться</a>
+            </div>
+
             <div class="contact-card">
                 <div class="contact-name">Кристина</div>
                 <div class="contact-phone">+375 (29) 289-63-62</div>
                 <a href="tel:+375292896362" class="btn" style="font-size: 0.9rem; padding: 0.7rem 1.5rem;">Связаться</a>
             </div>
-            <div class="contact-card">
-                <div class="contact-name">Захар</div>
-                <div class="contact-phone">+375 (29) 769-32-65</div>
-                <a href="tel:+375297693265" class="btn" style="font-size: 0.9rem; padding: 0.7rem 1.5rem;">Связаться</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown" id="countdown">
+        <div class="section-inner">
+        <h2>До нашей свадьбы осталось</h2>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">0</span>
+                <span class="countdown-label">Дней</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">0</span>
+                <span class="countdown-label">Часов</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">0</span>
+                <span class="countdown-label">Минут</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">0</span>
+                <span class="countdown-label">Секунд</span>
             </div>
         </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <section class="footer" id="footer">
+   <!--  <section class="footer" id="footer">
         <div class="footer-content">
             <h2>До скорой встречи!</h2>
             <p class="footer-signature">С любовью, Кристина и Захар</p>
         </div>
-    </section>
+    </section>-->
 
     <script>
         // Countdown Timer
@@ -1693,38 +1586,6 @@
         document.querySelectorAll('section:not(.hero)').forEach(section => {
             observer.observe(section);
         });
-
-        // Параллакс роз в Hero — при скролле страницы
-        (function() {
-            const hero = document.getElementById('hero');
-            const container = document.getElementById('hero-roses');
-            if (!hero || !container) return;
-            const roses = container.querySelectorAll('.hero-rose');
-            const scrollStrength = 0.14;
-            let scrollY = 0;
-            let currentOffset = 0;
-            const lerp = 0.08;
-            let rafId = null;
-
-            function updateParallax() {
-                currentOffset += (scrollY - currentOffset) * lerp;
-                roses.forEach(function(el) {
-                    const depth = parseFloat(el.getAttribute('data-depth')) || 0.4;
-                    const rot = el.getAttribute('data-rotate') || '0';
-                    const dy = -currentOffset * scrollStrength * depth;
-                    el.style.transform = 'rotate(' + rot + 'deg) translate(0, ' + dy + 'px)';
-                });
-                rafId = requestAnimationFrame(updateParallax);
-            }
-
-            function onScroll() {
-                scrollY = window.scrollY || window.pageYOffset;
-            }
-
-            window.addEventListener('scroll', onScroll, { passive: true });
-            onScroll();
-            rafId = requestAnimationFrame(updateParallax);
-        })();
 
         // Form handling
         document.getElementById('guest-form').addEventListener('submit', function(e) {
